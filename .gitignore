@@ -1,0 +1,10 @@
+Data/bin
+Data/obj
+Library/obj
+MicroService/obj
+Model/bin
+Model/obj
+Service/bin
+Library/bin
+Service/obj
+MicroService/bin
