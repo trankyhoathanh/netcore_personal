@@ -48,6 +48,19 @@ namespace MicroService.Controllers
             return Ok(result);
         }
 
+        [HttpGet("basic/hello2"), Produces("application/json")]
+        public IActionResult Hello2()
+        {
+            BaseReturnAPI result = new BaseReturnAPI()
+            {
+                Data = null,
+                StatusCode = JsonApiStatusCodes.Default,
+                Message = "Hello 2"
+            };
+
+            return Ok(result);
+        }
+
         #endregion Basic
     }
 }
