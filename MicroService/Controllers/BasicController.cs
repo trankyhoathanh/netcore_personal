@@ -74,6 +74,19 @@ namespace MicroService.Controllers
             return Ok(result);
         }
 
+        [HttpGet("basic/hello4"), Produces("application/json")]
+        public IActionResult Hello4()
+        {
+            BaseReturnAPI result = new BaseReturnAPI()
+            {
+                Data = null,
+                StatusCode = JsonApiStatusCodes.Default,
+                Message = "Hello 4"
+            };
+
+            return Ok(result);
+        }
+
         #endregion Basic
     }
 }
