@@ -61,6 +61,19 @@ namespace MicroService.Controllers
             return Ok(result);
         }
 
+        [HttpGet("basic/hello3"), Produces("application/json")]
+        public IActionResult Hello3()
+        {
+            BaseReturnAPI result = new BaseReturnAPI()
+            {
+                Data = null,
+                StatusCode = JsonApiStatusCodes.Default,
+                Message = "Hello 3 - test Jenkins"
+            };
+
+            return Ok(result);
+        }
+
         #endregion Basic
     }
 }
