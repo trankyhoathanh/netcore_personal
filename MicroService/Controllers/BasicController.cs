@@ -48,27 +48,14 @@ namespace MicroService.Controllers
             return Ok(result);
         }
 
-        [HttpGet("basic/hello2"), Produces("application/json")]
-        public IActionResult Hello2()
+        [HttpGet("basic/text"), Produces("application/json")]
+        public IActionResult Text()
         {
             BaseReturnAPI result = new BaseReturnAPI()
             {
                 Data = null,
                 StatusCode = JsonApiStatusCodes.Default,
-                Message = "Hello 2"
-            };
-
-            return Ok(result);
-        }
-
-        [HttpGet("basic/hello3"), Produces("application/json")]
-        public IActionResult Hello3()
-        {
-            BaseReturnAPI result = new BaseReturnAPI()
-            {
-                Data = null,
-                StatusCode = JsonApiStatusCodes.Default,
-                Message = "Hello 3 - test Jenkins"
+                Message = "Get Text Hard Code"
             };
 
             return Ok(result);
