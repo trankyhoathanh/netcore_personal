@@ -6,7 +6,7 @@ Step 2 : Update / restore Nuget Packaged
 Step 3 : Run "Micro Service" Project in MicroService Solution
 
 # api_structure
-GET localhost:62100/basic/hello
+http://netcorepersonal.trankyhoathanh.com/index.html
 
 # default_api_structure
 {
