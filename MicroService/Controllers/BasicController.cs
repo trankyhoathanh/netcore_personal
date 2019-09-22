@@ -61,6 +61,19 @@ namespace MicroService.Controllers
             return Ok(result);
         }
 
+        [HttpGet("basic/text2"), Produces("application/json")]
+        public IActionResult Text2()
+        {
+            BaseReturnAPI result = new BaseReturnAPI()
+            {
+                Data = null,
+                StatusCode = JsonApiStatusCodes.Default,
+                Message = "Get Text Hard Code 1231231233122131"
+            };
+
+            return Ok(result);
+        }
+
         #endregion Basic
     }
 }
