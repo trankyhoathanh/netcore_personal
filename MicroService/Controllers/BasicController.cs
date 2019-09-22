@@ -55,7 +55,7 @@ namespace MicroService.Controllers
             {
                 Data = null,
                 StatusCode = JsonApiStatusCodes.Default,
-                Message = "Get Text Hard Code"
+                Message = "Get Text Hard Code 8888"
             };
 
             return Ok(result);
