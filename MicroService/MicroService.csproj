@@ -6,6 +6,8 @@
 
   <ItemGroup>
     <Folder Include="wwwroot\" />
+    <Folder Include="swagger\" />
+    <Folder Include="swagger\v1\" />
   </ItemGroup>
 
   <ItemGroup>

@@ -10,6 +10,9 @@ namespace Service
         #region Method
 
         List<Config> GetAllConfigs();
+        Task<Config> Add(Config input);
+        Task<Config> Update(Config input);
+        Task<int> Delete(Config input);
 
         #endregion Method
     }

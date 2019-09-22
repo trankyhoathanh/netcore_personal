@@ -1,0 +1,8 @@
+﻿using System; namespace MicroService.swagger.v1 {
+  public class
+  swagger {
+    public swagger()
+    {
+    }
+  }
+}
