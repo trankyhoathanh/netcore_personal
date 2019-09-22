@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Linq;
-using MicroService.Data.Abstract;
 using MicroService.Model;
 using Microsoft.AspNetCore.Mvc;
 using Service;
@@ -20,7 +18,7 @@ namespace MicroService.Controllers
 
         #region Basic
         [HttpGet("basic/hello"), Produces("application/json")]
-        public IActionResult ValidateEmail()
+        public IActionResult Hello()
         {
             BaseReturnAPI result = new BaseReturnAPI()
             {
@@ -40,36 +38,10 @@ namespace MicroService.Controllers
             }
             catch (Exception ex)
             {
-                var k = ex;
+                var k = ex.ToString();
                 result.StatusCode = JsonApiStatusCodes.Failed;
-                result.Message = k.ToString();
+                result.Message = k;
             }
-
-            return Ok(result);
-        }
-
-        [HttpGet("basic/text"), Produces("application/json")]
-        public IActionResult Text()
-        {
-            BaseReturnAPI result = new BaseReturnAPI()
-            {
-                Data = null,
-                StatusCode = JsonApiStatusCodes.Default,
-                Message = "Get Text Hard Code 8888"
-            };
-
-            return Ok(result);
-        }
-
-        [HttpGet("basic/text2"), Produces("application/json")]
-        public IActionResult Text2()
-        {
-            BaseReturnAPI result = new BaseReturnAPI()
-            {
-                Data = null,
-                StatusCode = JsonApiStatusCodes.Default,
-                Message = "Get Text Hard Code 1231231233122131"
-            };
 
             return Ok(result);
         }
