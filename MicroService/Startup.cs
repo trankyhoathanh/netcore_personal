@@ -9,6 +9,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json.Serialization;
 using Service;
 
+// Swagger
+using Microsoft.OpenApi.Models;
+
 namespace MicroService
 {
     public class Startup
@@ -42,10 +45,23 @@ namespace MicroService
 
             // Configuration
             services.AddSingleton(Configuration);
+
+            // Swagger
+            services.AddSwaggerGen(c =>
+            {
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Personal API", Version = "v1" });
+            });
         }
 
         public void Configure(IApplicationBuilder app)
         {
+            app.UseSwagger();
+            app.UseSwaggerUI(c =>
+            {
+                c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+                c.RoutePrefix = string.Empty;
+            });
+
             app.UseMvc();
         }
     }
